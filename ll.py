@@ -34,3 +34,7 @@ def reverseKGroup(head, k):
         temp = prev_group_end.next  # Store old head (which is now the end)
         prev_group_end.next = prev  # Connect previous part to new head
         temp.next = current  # Connect the old head to the remaining list
+
+        # Step 7: Move to the next group
+        prev_group_end = temp
+        count -= k
