@@ -38,3 +38,9 @@ def reverseKGroup(head, k):
         # Step 7: Move to the next group
         prev_group_end = temp
         count -= k
+    
+     # Step 8: Return new head
+    return dummy.next
+
+
+    
