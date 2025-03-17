@@ -17,3 +17,8 @@ def reverseKGroup(head, k):
     dummy = ListNode(0)
     dummy.next = head
     prev_group_end = dummy
+
+    # Step 4: Process groups of k nodes
+    while count >= k:
+        prev = None
+        current = prev_group_end.next
