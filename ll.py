@@ -43,4 +43,13 @@ def reverseKGroup(head, k):
     return dummy.next
 
 
+# Example Test Cases
+def print_list(head):
+    result = []
+    while head:
+        result.append(head.val)
+        head = head.next
+    print(result)
+
+
     
