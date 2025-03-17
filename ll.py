@@ -29,3 +29,8 @@ def reverseKGroup(head, k):
             current.next = prev
             prev = current
             current = next_node
+
+        # Step 6: Connect the reversed group
+        temp = prev_group_end.next  # Store old head (which is now the end)
+        prev_group_end.next = prev  # Connect previous part to new head
+        temp.next = current  # Connect the old head to the remaining list
