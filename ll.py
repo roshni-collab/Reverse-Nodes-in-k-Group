@@ -22,3 +22,10 @@ def reverseKGroup(head, k):
     while count >= k:
         prev = None
         current = prev_group_end.next
+
+        # Step 5: Reverse k nodes
+        for _ in range(k):
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
