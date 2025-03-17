@@ -12,3 +12,8 @@ def reverseKGroup(head, k):
     while current:
         count += 1
         current = current.next
+
+    # Step 3: Initialize dummy node and pointers
+    dummy = ListNode(0)
+    dummy.next = head
+    prev_group_end = dummy
